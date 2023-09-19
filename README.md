@@ -1,3 +1,3 @@
 # sand_box
 
-A new Flutter project.
+App for testing random concepts in flutter.
