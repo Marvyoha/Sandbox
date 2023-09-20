@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sand_box/main.dart';
+
+import 'navigation_example.dart';
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

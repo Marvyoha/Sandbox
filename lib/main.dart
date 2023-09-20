@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sand_box/Navigation%20routing/routes.dart';
+import 'package:sand_box/Provider%20practice/movie_provider.dart';
+import 'package:sand_box/Provider%20practice/movie_ui.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => MovieProvider())],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,52 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      onGenerateRoute: RouteGenerator.generateRoute,
-      initialRoute: 'first page',
-    );
-  }
-}
-
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Column(
-        children: [
-          const Text('First Page'),
-          const Text('This is the first page'),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'second page');
-              },
-              child: const Text('Next page')),
-        ],
-      )),
-    );
-  }
-}
-
-class SecondPage extends StatelessWidget {
-  const SecondPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-          child: Column(
-        children: [
-          const Text('Second Page'),
-          const Text('This is the second page'),
-          ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, 'first page');
-              },
-              child: const Text('Previous page')),
-        ],
-      )),
+      home: MovieScreen(),
     );
   }
 }

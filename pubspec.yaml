@@ -1,5 +1,5 @@
 name: sand_box
-description: A new Flutter project.
+description: A Practice project.
 publish_to: 'none'
 version: 0.1.0
 
@@ -9,7 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  provider:
+  ionicons: ^0.2.2
+  provider: ^6.0.5
 
 dev_dependencies:
   flutter_lints: ^2.0.0
