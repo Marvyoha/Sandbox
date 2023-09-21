@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sand_box/Navigation%20routing/routes.dart';
+
+import 'routes.dart';
 
 void main() {
   runApp(const MyApp());

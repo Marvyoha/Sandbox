@@ -5,11 +5,22 @@
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
-import 'package:sand_box/Provider%20practice/movie_model.dart';
 // Importing the movie provider
 import 'movie_provider.dart';
 
-// This is the main widget for the movie screen
+// MAIN FUNCTION
+void main() {
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(create: (context) => MovieProvider())],
+      child: const MaterialApp(
+        home: MovieScreen(),
+      ),
+    ),
+  );
+}
+
+// MOVIESCREEN
 class MovieScreen extends StatefulWidget {
   // Constructor for the MovieScreen widget
   const MovieScreen({super.key});
@@ -118,6 +129,7 @@ class _MovieScreenState extends State<MovieScreen> {
   }
 }
 
+// SECOND PAGE
 class Secondpage extends StatefulWidget {
   const Secondpage({Key? key}) : super(key: key);
 
