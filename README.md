@@ -1,3 +1,3 @@
 # sand_box
 
-App for testing random concepts in flutter.
+App for testing random concepts,packages and other stuffs in flutter.
